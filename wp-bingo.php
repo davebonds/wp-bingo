@@ -3,8 +3,8 @@
  * Plugin Name:			WP Bingo
  * Plugin URI:			https://bleucellar.com/
  * Description:			Fun plugin to play bingo
- * Version:				1.0.0
- * Author:				Mike Estrada
+ * Version:				2.0.0
+ * Author:				Mike Estrada, davebonds
  * Author URI:			https://bleucellar.com/
  * Text Domain:			wp-bingo
  */

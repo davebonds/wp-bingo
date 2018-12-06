@@ -63,18 +63,25 @@ class WP_Bingo_Shortcode {
 
 			if ( !empty( $buzzwords ) ) {
 
+				//var_dump( $buzzwords);
+
 				$count_words    = count( $buzzwords );
 
 				for ( $i = 0; $i < $count_words; $i++ ) {
+
+					if ( $i > 23 ) {
+						continue;
+					}
 
 					// FREE TILE
 					if ( $i == 12 ) {
 						echo '<div class="wp-bingo__item active">FREE</div>'."\n\t\t\t\t";
 					}
 
-					$word   = array_rand( $buzzwords );
-
-					echo '<div class="wp-bingo__item">'. $buzzwords[$word] .'</div>'."\n\t\t\t\t";
+					$word = array_rand( $buzzwords, 1 );
+					echo '<div class="wp-bingo__item">';
+					echo $buzzwords[$word];
+					echo '</div>'."\n\t\t\t\t";
 
 					unset( $buzzwords[$word] );
 

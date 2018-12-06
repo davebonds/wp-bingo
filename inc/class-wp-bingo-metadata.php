@@ -76,7 +76,7 @@ class WP_Bingo_Metadata {
 		$i		= 0;
 		?>
 
-		<div class="wb-repeatable-fields" data-repeat-limit="24">
+		<div class="wb-repeatable-fields" data-repeat-limit="42">
 
 			<?php
 

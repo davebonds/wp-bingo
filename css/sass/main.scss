@@ -1,7 +1,9 @@
 /**
  * Variables & Mixins
  */
-$border-color: #888;
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+$border-color: #ccc;
 
 @mixin vh-center() {
 	align-items: center;
@@ -14,14 +16,23 @@ $border-color: #888;
 	margin: 0 auto;
 	padding: 20px 0;
 	width: 100%;
-
-	@media ( min-width: 768px ) {
-		max-width: 635px;
+	
+	@media ( min-width: 1023px ) {
+		max-width: 980px;
 	}
 
 }
 
 .wp-bingo {
+	background: url('../img/paper-texture-2.jpg');
+	font-family: 'Bowlby One SC', sans-serif;
+	font-size: 1.5rem;
+	
+	h1 {
+		text-align: center;
+		font-family: 'Bowlby One SC', sans-serif;
+		font-size: 3rem;
+	}
 
 	&.layout-simple{
 		margin: 0;
@@ -29,16 +40,19 @@ $border-color: #888;
 	}
 
 	&__header {
+		font-family: 'Bowlby One SC', sans-serif;
 		border: solid $border-color;
 		border-width: 0 2px 0 0;
 		display: grid;
 		grid-template-columns: repeat( 5, 20% );
 
 		> div {
+			background: rgba(255,255,255,0.6);
 			border: solid $border-color;
 			border-width: 2px 0 0 2px;
 			min-height: 100px;
 			padding: 10px;
+			font-size: 4rem;
 
 			@include vh-center;
 		}
@@ -52,7 +66,7 @@ $border-color: #888;
 	}
 
 	&__item {
-		background-color: #111;
+		background-color: #222;
 		border: solid $border-color;
 		border-width: 2px 0 0 2px;
 		color: #fff;
@@ -67,12 +81,32 @@ $border-color: #888;
 		}
 
 		&.active {
-			background-color: #00f;
+			background-color: #c42b2b;
 		}
 
 	}
 
+	
+
 }
+
+@media ( max-width: 600px ) {
+	.wp-bingo {
+		font-size: 0.65rem;
+	}
+}
+
+.wcus-share {
+	clear: both;
+	display: block;
+	max-width: 980px;
+	margin: 2rem auto;
+	text-align: center;
+}
+
+// .wcus-share iframe {
+// 	margin: 0 auto;
+	// }
 
 #confetti {
 	left: 0;
