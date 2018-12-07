@@ -14,24 +14,26 @@ $border-color: #ccc;
 
 .wrapper {
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 0 0 20px;
 	width: 100%;
 	
 	@media ( min-width: 1023px ) {
 		max-width: 980px;
 	}
-
+	
+	* {
+		font-family: 'Bowlby One SC', sans-serif;
+	}
 }
 
 .wp-bingo {
 	background: url('../img/paper-texture-2.jpg');
-	font-family: 'Bowlby One SC', sans-serif;
 	font-size: 1.5rem;
 	
 	h1 {
 		text-align: center;
-		font-family: 'Bowlby One SC', sans-serif;
 		font-size: 3rem;
+		font-weight: 400;
 	}
 
 	&.layout-simple{
@@ -40,7 +42,6 @@ $border-color: #ccc;
 	}
 
 	&__header {
-		font-family: 'Bowlby One SC', sans-serif;
 		border: solid $border-color;
 		border-width: 0 2px 0 0;
 		display: grid;
@@ -85,8 +86,30 @@ $border-color: #ccc;
 		}
 
 	}
-
 	
+	.wcus-share {
+		clear: both;
+		display: block;
+		max-width: 980px;
+		margin: 2rem auto;
+		font-family: 'Bowlby One SC', sans-serif;
+		text-align: center;
+	}
+
+	.refresh {
+		margin-left: 2rem;
+		text-decoration: none;
+		color: #222;
+
+		.dashicons-update {
+			font-size: 2rem;
+			line-height: 1.25;
+		}
+		
+		&:hover {
+			color: green;
+		}
+	}
 
 }
 
@@ -95,18 +118,6 @@ $border-color: #ccc;
 		font-size: 0.65rem;
 	}
 }
-
-.wcus-share {
-	clear: both;
-	display: block;
-	max-width: 980px;
-	margin: 2rem auto;
-	text-align: center;
-}
-
-// .wcus-share iframe {
-// 	margin: 0 auto;
-	// }
 
 #confetti {
 	left: 0;
